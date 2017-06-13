@@ -1,0 +1,71 @@
+create database Projeto_03_Transporte;
+
+use Projeto_03_Transporte;
+
+create table caminhao (
+	id_caminhao int primary key auto_increment not null,
+	placa_caminhao varchar (50) unique not null,
+	fabricante_caminhao varchar (50) not null,
+	ano_caminhao int not null,
+	tipo_caminhao varchar (50) not null,
+	carga_caminhao varchar (50) not null,
+	capacidade_caminhao decimal (10,2) not null,
+	eixos_caminhao int not null,
+	foto_caminhao varchar (50) not null	
+);
+
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('GJH-1243', 'Volkswagen', 1987, 'Baú', 'Móveis', 7500.00, 3, '1.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('ABC-2367', 'Volkswagen', 1994, 'Graneleiro', 'Soja', 9500.00, 3, '2.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('PKG-6969', 'Volkswagen', 1987, 'Graneleiro', 'Milho', 8000.00, 3, '2.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('XCT-0001', 'Scania', 1989, 'Graneleiro', 'Feijão', 8500.00, 3, '2.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('AKS-0101', 'Scania', 1995, 'Basculante', 'Terra', 11000.00, 6, '3.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('TIT-9348', 'Scania', 1998, 'Basculante', 'Areia', 12500.00, 6, '3.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('DLC-2424', 'Mercedes-Benz', 1999, 'Basculante', 'Pedra', 10500.00, 6, '3.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('SPO-1111', 'Mercedes-Benz', 1993, 'Refrigerado', 'Carne', 6000.00, 3, '4.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('TEC-0984', 'Mercedes-Benz', 2001, 'Refrigerado', 'Sorvete', 4500.00, 3, '4.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('ZHX-7812', 'Volvo', 2004, 'Florestal', 'Cana', 24000.00, 7, '5.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('CHL-5601', 'Volvo', 1995, 'Florestal', 'Eucalipto', 35000.00, 9, '5.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('BRL-2309', 'Volvo', 1997, 'Tanque', 'Agua', 27500.00, 7, '6.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('ZXL-3491', 'GMC', 2008, 'Tanque', 'Gasolina', 27500.00, 7, '6.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('FEL-3401', 'GMC', 2002, 'Tanque', 'Alcool', 27500.00, 7, '6.jpg');
+insert into caminhao (placa_caminhao, fabricante_caminhao, ano_caminhao, tipo_caminhao, carga_caminhao, capacidade_caminhao, eixos_caminhao, foto_caminhao) 
+	values ('WRX-009', 'GMC', 1978, 'Tanque', 'Diesel', 27500.00, 7, '6.jpg');
+
+create table viagem (
+	id_viagem int primary key auto_increment not null,
+	id_caminhao int not null,
+	tipo_viagem varchar (50) not null,
+	km_viagem varchar (50) not null,
+	custo_viagem decimal (10,2) not null,
+	quantidade_viagem decimal (10,2) not null,
+	tempo_viagem varchar (50) not null, 
+	origem_viagem varchar (100) not null,
+	destino_viagem varchar (100) not null
+);
+
+insert into viagem (id_caminhao, tipo_viagem, km_viagem, custo_viagem, quantidade_viagem, tempo_viagem, origem_viagem, destino_viagem) 
+values (4, 'Ida', '874.00', 3.45, 8500.00, '9.00', 'Rua Pastor Hugo Gegembauer Hortolandia', 'Avenida Paulista Sao Paulo');
+insert into viagem (id_caminhao, tipo_viagem, km_viagem, custo_viagem, quantidade_viagem, tempo_viagem, origem_viagem, destino_viagem) 
+values (8, 'Ida','2945.00', 3.45, 6000.00, '34.00', 'Rua Pastor Hugo Gegembauer Hortolandia', 'Avenida Brasil Hortolandia');
+insert into viagem (id_caminhao, tipo_viagem, km_viagem, custo_viagem, quantidade_viagem, tempo_viagem, origem_viagem, destino_viagem) 
+values (2, 'Volta', '1236.00', 3.45, 9500.00, '15.00', 'Avenida Emancipacao Hortolandia', 'Avenida Brasil Hortolandia');
+insert into viagem (id_caminhao, tipo_viagem, km_viagem, custo_viagem, quantidade_viagem, tempo_viagem, origem_viagem, destino_viagem) 
+values (12, 'Volta', '2843.00', 3.45, 27500.00, '53.00', 'Avenida Emancipacao Hortolandia', 'Avenida Santana Hortolandia');
+
+select * from caminhao;
+
+select * from viagem;
