@@ -1,0 +1,753 @@
+create database Projeto_01_Nutricionista_52718;
+
+use Projeto_01_Nutricionista_52718;
+
+create table Paciente(
+
+	id_paciente integer primary key identity(1,1) not null,
+
+	nome_paciente varchar(100) not null
+
+);
+
+create table Mes(
+
+	id_mes integer primary key identity(1,1) not null,
+
+	nome_mes varchar(100) not null
+
+);
+
+create table Pesagem(
+
+	id_pesagem integer primary key identity(1,1) not null,
+
+	id_paciente integer not null,
+
+	id_mes integer not null,
+
+	peso_inicio decimal(5,2),
+
+	peso_quinzena decimal(5,2),
+
+	foreign key (id_paciente) references Paciente(id_paciente),
+
+	foreign key (id_mes) references Mes(id_mes)
+
+);
+
+insert into Paciente (nome_paciente) values ('Maria');
+insert into Paciente (nome_paciente) values ('Mayara');
+insert into Paciente (nome_paciente) values ('Camila');
+insert into Paciente (nome_paciente) values ('Mirna');
+insert into Paciente (nome_paciente) values ('Joana');
+insert into Paciente (nome_paciente) values ('Jaqueline');
+insert into Paciente (nome_paciente) values ('Juliana');
+insert into Paciente (nome_paciente) values ('Monique');
+insert into Paciente (nome_paciente) values ('Suelen');
+insert into Paciente (nome_paciente) values ('Julia');
+insert into Paciente (nome_paciente) values ('Priscila');
+insert into Paciente (nome_paciente) values ('Fernanda');
+insert into Paciente (nome_paciente) values ('Leticia');
+insert into Paciente (nome_paciente) values ('Nabila');
+insert into Paciente (nome_paciente) values ('Antonia');
+insert into Paciente (nome_paciente) values ('Ana');
+insert into Paciente (nome_paciente) values ('Flavia');
+insert into Paciente (nome_paciente) values ('Simone');
+insert into Paciente (nome_paciente) values ('Cristina');
+insert into Paciente (nome_paciente) values ('Paloma');
+insert into Paciente (nome_paciente) values ('Deise');
+insert into Paciente (nome_paciente) values ('Melissa');
+insert into Paciente (nome_paciente) values ('Daniela');
+insert into Paciente (nome_paciente) values ('Hillory');
+insert into Paciente (nome_paciente) values ('Jessica');
+insert into Paciente (nome_paciente) values ('Sheila');
+insert into Paciente (nome_paciente) values ('Gabriela');
+insert into Paciente (nome_paciente) values ('Viviane');
+insert into Paciente (nome_paciente) values ('Amanda');
+insert into Paciente (nome_paciente) values ('Helena');
+insert into Paciente (nome_paciente) values ('Patricia');
+insert into Paciente (nome_paciente) values ('Bruna');
+insert into Paciente (nome_paciente) values ('Taina');
+insert into Paciente (nome_paciente) values ('Heolisa');
+insert into Paciente (nome_paciente) values ('Vanessa');
+insert into Paciente (nome_paciente) values ('Barbara');
+insert into Paciente (nome_paciente) values ('Michele');
+insert into Paciente (nome_paciente) values ('Tamires');
+insert into Paciente (nome_paciente) values ('Ludmila');
+insert into Paciente (nome_paciente) values ('Anita');
+insert into Paciente (nome_paciente) values ('Lais');
+insert into Paciente (nome_paciente) values ('Tais');
+insert into Paciente (nome_paciente) values ('Marta');
+insert into Paciente (nome_paciente) values ('Carolina');
+insert into Paciente (nome_paciente) values ('Agatha');
+insert into Paciente (nome_paciente) values ('Sonia');
+insert into Paciente (nome_paciente) values ('Adriana');
+insert into Paciente (nome_paciente) values ('Leiliane');
+insert into Paciente (nome_paciente) values ('Cibele');
+insert into Paciente (nome_paciente) values ('Aparecida');
+
+insert into Mes (nome_mes) values ('Janeiro');
+insert into Mes (nome_mes) values ('Fevereiro');
+insert into Mes (nome_mes) values ('Março');
+insert into Mes (nome_mes) values ('Abril');
+insert into Mes (nome_mes) values ('Maio');
+insert into Mes (nome_mes) values ('Junho');
+insert into Mes (nome_mes) values ('Julho');
+insert into Mes (nome_mes) values ('Agosto');
+insert into Mes (nome_mes) values ('Setembro');
+insert into Mes (nome_mes) values ('Outubro');
+insert into Mes (nome_mes) values ('Novembro');
+insert into Mes (nome_mes) values ('Dezembro');
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (1,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (1,2,49.00,48.85);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (1,3,50.00,49.85);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (1,4,51.00,50.85);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (1,5,52.00,51.83);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (1,6,53.00,52.34);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (1,7,54.00,53.61);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (1,8,55.00,52.48);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (1,9,54.00,52.48);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (1,10,53.00,52.10);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (1,11,52.00,54.10);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (1,12,51.00,50.97);
+
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (2,1,71.00,69.50);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (2,2,70.00,69.50);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (2,3,69.00,68.50);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (2,4,68.00,67.50);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (2,5,67.00,66.50);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (2,6,66.00,65.50);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (2,7,66.00,66.50);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (2,8,65.00,64.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (2,9,63.00,64.50);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (2,10,61.00,62.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (2,11,59.00,60.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (2,12,57.00,56.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (3,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (3,2,47.50,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (3,3,47.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (3,4,46.50,46.50);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (3,5,46.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (3,6,45.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (3,7,44.50,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (3,8,45.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (3,9,45.50,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (3,10,46.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (3,11,46.50,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (3,12,46.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (4,1,56.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (4,2,88.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (4,3,56.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (4,4,56.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (4,5,64.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (4,6,53.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (4,7,78.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (4,8,32.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (4,9,78.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (4,10,23.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (4,11,23.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (4,12,78.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (5,1,127.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (5,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (5,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (5,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (5,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (5,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (5,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (5,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (5,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (5,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (5,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (5,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (6,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (6,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (6,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (6,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (6,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (6,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (6,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (6,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (6,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (6,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (6,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (6,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (7,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (7,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (7,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (7,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (7,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (7,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (7,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (7,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (7,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (7,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (7,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (7,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (8,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (8,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (8,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (8,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (8,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (8,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (8,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (8,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (8,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (8,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (8,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (8,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (9,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (9,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (9,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (9,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (9,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (9,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (9,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (9,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (9,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (9,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (9,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (9,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (10,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (10,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (10,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (10,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (10,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (10,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (10,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (10,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (10,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (10,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (10,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (10,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (11,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (11,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (11,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (11,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (11,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (11,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (11,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (11,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (11,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (11,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (11,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (11,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (12,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (12,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (12,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (12,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (12,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (12,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (12,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (12,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (12,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (12,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (12,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (12,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (13,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (13,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (13,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (13,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (13,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (13,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (13,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (13,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (13,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (13,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (13,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (13,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (14,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (14,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (14,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (14,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (14,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (14,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (14,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (14,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (14,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (14,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (14,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (14,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (15,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (15,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (15,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (15,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (15,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (15,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (15,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (15,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (15,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (15,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (15,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (15,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (16,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (16,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (16,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (16,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (16,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (16,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (16,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (16,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (16,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (16,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (16,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (16,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (17,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (17,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (17,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (17,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (17,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (17,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (17,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (17,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (17,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (17,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (17,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (17,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (18,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (18,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (18,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (18,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (18,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (18,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (18,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (18,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (18,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (18,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (18,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (18,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (19,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (19,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (19,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (19,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (19,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (19,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (19,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (19,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (19,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (19,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (19,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (19,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (20,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (20,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (20,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (20,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (20,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (20,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (20,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (20,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (20,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (20,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (20,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (20,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (21,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (21,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (21,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (21,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (21,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (21,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (21,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (21,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (21,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (21,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (21,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (21,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (22,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (22,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (22,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (22,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (22,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (22,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (22,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (22,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (22,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (22,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (22,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (22,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (23,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (23,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (23,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (23,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (23,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (23,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (23,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (23,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (23,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (23,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (23,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (23,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (24,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (24,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (24,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (24,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (24,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (24,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (24,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (24,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (24,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (24,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (24,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (24,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (25,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (25,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (25,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (25,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (25,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (25,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (25,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (25,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (25,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (25,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (25,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (25,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (26,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (26,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (26,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (26,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (26,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (26,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (26,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (26,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (26,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (26,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (26,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (26,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (27,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (27,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (27,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (27,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (27,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (27,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (27,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (27,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (27,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (27,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (27,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (27,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (28,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (28,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (28,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (28,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (28,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (28,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (28,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (28,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (28,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (28,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (28,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (28,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (29,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (29,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (29,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (29,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (29,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (29,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (29,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (29,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (29,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (29,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (29,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (29,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (30,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (30,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (30,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (30,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (30,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (30,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (30,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (30,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (30,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (30,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (30,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (30,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (31,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (31,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (31,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (31,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (31,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (31,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (31,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (31,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (31,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (31,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (31,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (31,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (32,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (32,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (32,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (32,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (32,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (32,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (32,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (32,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (32,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (32,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (32,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (32,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (33,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (33,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (33,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (33,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (33,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (33,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (33,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (33,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (33,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (33,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (33,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (33,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (34,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (34,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (34,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (34,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (34,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (34,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (34,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (34,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (34,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (34,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (34,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (34,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (35,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (35,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (35,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (35,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (35,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (35,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (35,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (35,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (35,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (35,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (35,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (35,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (36,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (36,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (36,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (36,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (36,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (36,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (36,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (36,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (36,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (36,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (36,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (36,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (37,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (37,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (37,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (37,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (37,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (37,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (37,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (37,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (37,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (37,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (37,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (37,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (38,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (38,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (38,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (38,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (38,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (38,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (38,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (38,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (38,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (38,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (38,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (38,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (39,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (39,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (39,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (39,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (39,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (39,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (39,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (39,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (39,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (39,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (39,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (39,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (40,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (40,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (40,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (40,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (40,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (40,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (40,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (40,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (40,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (40,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (40,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (40,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (41,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (41,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (41,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (41,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (41,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (41,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (41,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (41,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (41,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (41,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (41,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (41,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (42,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (42,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (42,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (42,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (42,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (42,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (42,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (42,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (42,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (42,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (42,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (42,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (43,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (43,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (43,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (43,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (43,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (43,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (43,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (43,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (43,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (43,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (43,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (43,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (44,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (44,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (44,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (44,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (44,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (44,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (44,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (44,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (44,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (44,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (44,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (44,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (45,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (45,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (45,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (45,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (45,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (45,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (45,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (45,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (45,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (45,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (45,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (45,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (46,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (46,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (46,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (46,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (46,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (46,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (46,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (46,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (46,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (46,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (46,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (46,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (47,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (47,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (47,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (47,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (47,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (47,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (47,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (47,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (47,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (47,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (47,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (47,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (48,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (48,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (48,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (48,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (48,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (48,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (48,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (48,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (48,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (48,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (48,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (48,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (49,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (49,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (49,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (49,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (49,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (49,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (49,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (49,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (49,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (49,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (49,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (49,12,48.00,47.00);
+
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (50,1,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (50,2,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (50,3,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (50,4,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (50,5,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (50,6,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (50,7,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (50,8,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (50,9,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (50,10,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (50,11,48.00,47.00);
+insert into Pesagem (id_paciente, id_mes, peso_inicio, peso_quinzena) values (50,12,48.00,47.00);
+
