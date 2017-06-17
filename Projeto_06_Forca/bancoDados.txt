@@ -1,0 +1,58 @@
+create database Forca;
+
+use Forca;
+
+create table Facil(
+	id int primary key identity(1,1) not null,
+	palavra varchar(4) not null,
+	dica varchar(50) not null
+);
+
+create table Medio(
+	id int primary key identity(1,1) not null,
+	palavra varchar(6) not null,
+	dica varchar(50) not null
+);
+
+create table Dificil(
+	id int primary key identity(1,1) not null,
+	palavra varchar(8) not null,
+	dica varchar(50) not null
+);
+
+insert into Facil (palavra, dica) values ('casa','moradia');
+insert into Facil (palavra, dica) values ('joia','diamante');
+insert into Facil (palavra, dica) values ('voce','you');
+insert into Facil (palavra, dica) values ('gelo','frio');
+insert into Facil (palavra, dica) values ('nojo','horrível');
+insert into Facil (palavra, dica) values ('amor','love');
+insert into Facil (palavra, dica) values ('bola','futebol');
+insert into Facil (palavra, dica) values ('gato','miau');
+insert into Facil (palavra, dica) values ('caos','destruição');
+insert into Facil (palavra, dica) values ('bota','sapato');
+
+insert into Medio (palavra, dica) values ('morrer','matar');
+insert into Medio (palavra, dica) values ('objeto','java');
+insert into Medio (palavra, dica) values ('pensar','raciocinar');
+insert into Medio (palavra, dica) values ('buscar','google');
+insert into Medio (palavra, dica) values ('primos','tios');
+insert into Medio (palavra, dica) values ('jamais','nunca');
+insert into Medio (palavra, dica) values ('amigos','colegas');
+insert into Medio (palavra, dica) values ('gentil','educado');
+insert into Medio (palavra, dica) values ('servir','garçom');
+insert into Medio (palavra, dica) values ('chapeu','bone');
+
+insert into Dificil (palavra, dica) values ('escrever', 'Difícil não tem dica');
+insert into Dificil (palavra, dica) values ('vigoroso', 'Difícil não tem dica');
+insert into Dificil (palavra, dica) values ('respeito', 'Difícil não tem dica');
+insert into Dificil (palavra, dica) values ('complexo', 'Difícil não tem dica');
+insert into Dificil (palavra, dica) values ('alienado', 'Difícil não tem dica');
+insert into Dificil (palavra, dica) values ('apologia', 'Difícil não tem dica');
+insert into Dificil (palavra, dica) values ('perverso', 'Difícil não tem dica');
+insert into Dificil (palavra, dica) values ('impavido', 'Difícil não tem dica');
+insert into Dificil (palavra, dica) values ('objetivo', 'Difícil não tem dica');
+insert into Dificil (palavra, dica) values ('destreza', 'Difícil não tem dica');
+
+select * from Facil;
+select * from Medio;
+select * from Dificil;
